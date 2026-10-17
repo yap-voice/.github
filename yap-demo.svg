@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 150" width="640" height="150" role="img" aria-label="Yap demo: Hinglish speech turned into clean English text">
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .say { opacity: 0; animation: say 8s infinite; }
+    .out { opacity: 0; animation: out 8s infinite; }
+    .bar { transform-box: fill-box; transform-origin: center; animation: wave 8s infinite; }
+    .b2 { animation-delay: .1s; } .b3 { animation-delay: .2s; } .b4 { animation-delay: .3s; } .b5 { animation-delay: .4s; }
+    @keyframes say { 0% { opacity: 0; } 5%, 90% { opacity: 1; } 97%, 100% { opacity: 0; } }
+    @keyframes out { 0%, 42% { opacity: 0; transform: translateY(6px); } 48%, 90% { opacity: 1; transform: translateY(0); } 97%, 100% { opacity: 0; } }
+    @keyframes wave {
+      0%, 10% { transform: scaleY(.4); }
+      15% { transform: scaleY(1); } 20% { transform: scaleY(.5); } 25% { transform: scaleY(.9); }
+      30% { transform: scaleY(.4); } 35% { transform: scaleY(1); } 40%, 100% { transform: scaleY(.4); }
+    }
+  </style>
+  <rect width="640" height="150" rx="12" fill="#0D1117"/>
+  <rect x="0.5" y="0.5" width="639" height="149" rx="11.5" fill="none" stroke="#30363D"/>
+
+  <text x="24" y="34" class="mono" font-size="11" fill="#8B949E" letter-spacing="1">YOU SAY</text>
+  <text x="24" y="56" class="mono say" font-size="14" fill="#C9D1D9">"bhai invoice bhej diya hai, payment is hafte kar dena please"</text>
+
+  <g fill="#D2E823">
+    <rect class="bar" x="24" y="72" width="4" height="14" rx="2"/>
+    <rect class="bar b2" x="32" y="68" width="4" height="22" rx="2"/>
+    <rect class="bar b3" x="40" y="65" width="4" height="28" rx="2"/>
+    <rect class="bar b4" x="48" y="69" width="4" height="20" rx="2"/>
+    <rect class="bar b5" x="56" y="73" width="4" height="12" rx="2"/>
+  </g>
+
+  <text x="24" y="114" class="mono" font-size="11" fill="#8B949E" letter-spacing="1">YAP WRITES</text>
+  <text x="24" y="136" class="mono out" font-size="14" fill="#F0F6FC">Hi, I've sent the invoice. Please clear the payment this week.</text>
+</svg>
